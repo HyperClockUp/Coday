@@ -1,0 +1,12 @@
+<!-- Coday brand mark. C-shaped relay channel. See render-icon.mjs for the
+     icon-pipeline source; libxml's strict mode rejects double hyphens
+     inside comments, so longer narrative comments live in the inline
+     copy in CfTitleBar.vue and the script README instead. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <rect width="24" height="24" rx="6" fill="#0f172a"/>
+  <path d="M6 7 L13 7 A5 5 0 0 1 13 17 L6 17"
+        stroke="#ffffff" stroke-width="2.4"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="6" cy="7" r="1.6" fill="#60a5fa"/>
+  <circle cx="6" cy="17" r="1.6" fill="#60a5fa"/>
+</svg>
