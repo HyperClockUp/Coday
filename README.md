@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="../../releases/latest">
-    <img src="https://img.shields.io/github/v/release/HyperClockUp/Coday-releases?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=007aff" alt="最新版本" />
+    <img src="https://img.shields.io/github/v/release/HyperClockUp/Coday?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=007aff" alt="最新版本" />
   </a>
   <img src="https://img.shields.io/badge/Windows-10%20/%2011%20(64--bit)-007aff" alt="Windows" />
   <img src="https://img.shields.io/badge/macOS-%E5%8D%B3%E5%B0%86%E6%94%AF%E6%8C%81-8a8a8e" alt="macOS" />
