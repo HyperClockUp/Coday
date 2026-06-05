@@ -1,10 +1,12 @@
 <div align="center">
 
+<b>English</b> · <a href="README.zh-CN.md">简体中文</a>
+
 # ⚡ Coday
 
-**给 Cursor、Windsurf、Devin 灌入你自己的 API 源**
+**Bring your own API to Cursor, Windsurf & Devin**
 
-任意模型 · 任意来源 · 不被内置渠道限制
+Any model · Any provider · No built-in channel limits
 
 <p>
   <a href="../../releases/latest">
@@ -22,17 +24,17 @@
 
 </div>
 
-<!-- 产品截图（可选）：把 docs/screenshot.png 放进仓库后取消下一行注释即可展示
-<div align="center"><img src="docs/screenshot.png" width="760" alt="Coday 界面" /></div>
+<!-- Product screenshot (optional): drop docs/screenshot.png into the repo and uncomment the line below
+<div align="center"><img src="docs/screenshot.png" width="760" alt="Coday" /></div>
 -->
 
 ---
 
-## 概览
+## Overview
 
-**Coday** 是一个桌面客户端，把 **Cursor、Windsurf、Devin** 发出的 AI 请求接管到你自己配置的 API 源——第三方中转、官方网关，或你自己的 Key 都行——让这些 IDE 用上 **任意模型、任意来源**。
+**Coday** is a desktop client that reroutes the AI requests from **Cursor, Windsurf, and Devin** to an API source you control — a third-party relay, an official gateway, or your own key — letting these IDEs run on **any model, from any provider**.
 
-配好源、填上 Key，在熟悉的 IDE 里照常聊天写码，背后走的全是你的 API。
+Set up a source, drop in your key, and keep chatting and coding in the IDE you already know — everything behind the scenes runs on your own API.
 
 <br>
 
@@ -40,35 +42,35 @@
 <table>
 <tr>
 <td align="center" width="240">
-🧩<br><b>多 IDE 接管</b><br><br>
-<sub>Cursor · Windsurf · Devin<br>一处配置，全部生效</sub>
+🧩<br><b>Multi-IDE</b><br><br>
+<sub>Cursor · Windsurf · Devin<br>One client, configure once</sub>
 <br><br>
 </td>
 <td align="center" width="240">
-🔌<br><b>自定义 API 源</b><br><br>
-<sub>灌入你的 Key 或中转<br>Claude · GPT · Gemini 任选</sub>
+🔌<br><b>Bring Your Own API</b><br><br>
+<sub>Your own key or relay<br>Claude · GPT · Gemini, your pick</sub>
 <br><br>
 </td>
 <td align="center" width="240">
-🔀<br><b>多源切换</b><br><br>
-<sub>配置多个源<br>首页一键切换，即切即生效</sub>
+🔀<br><b>Source Switching</b><br><br>
+<sub>Configure multiple sources<br>Switch from home, instantly</sub>
 <br><br>
 </td>
 </tr>
 <tr>
 <td align="center" width="240">
-📚<br><b>模型库</b><br><br>
-<sub>自动同步上游模型<br>按模型设单价与思考强度</sub>
+📚<br><b>Model Library</b><br><br>
+<sub>Auto-sync upstream models<br>Per-model price & reasoning effort</sub>
 <br><br>
 </td>
 <td align="center" width="240">
-🧠<br><b>用量估算</b><br><br>
-<sub>按你的单价估算花费<br>每笔请求心里有数</sub>
+🧠<br><b>Usage Estimate</b><br><br>
+<sub>Cost based on your pricing<br>Know every request's spend</sub>
 <br><br>
 </td>
 <td align="center" width="240">
-🔄<br><b>自动更新</b><br><br>
-<sub>内置更新器<br>新版应用内一键升级</sub>
+🔄<br><b>Auto-Update</b><br><br>
+<sub>Built-in updater<br>One-click in-app upgrade</sub>
 <br><br>
 </td>
 </tr>
@@ -77,7 +79,7 @@
 
 ---
 
-## 支持的 IDE
+## Supported IDEs
 
 <div align="center">
 
@@ -85,39 +87,39 @@
 | :----: | :------: | :---: |
 |   ✅   |    ✅    |   ✅   |
 
-<sub>更多 IDE 持续接入中</sub>
+<sub>More IDEs on the way</sub>
 
 </div>
 
 ---
 
-## 下载与安装
+## Download & Install
 
-前往 **[Releases](../../releases/latest)** 下载最新安装包。
+Grab the latest installer from **[Releases](../../releases/latest)**.
 
-| 平台 | 安装包 | 状态 |
-| ---- | ------ | :--: |
+| Platform | Installer | Status |
+| -------- | --------- | :----: |
 | **Windows 10 / 11** | `Coday_x.x.x_x64-setup.exe` | ✅ |
-| **macOS** | — | 开发中 |
+| **macOS** | — | In progress |
 
-**三步上手**
+**Three steps**
 
-1. 双击安装包完成安装（如弹出一次 UAC 授权，点「是」）。
-2. 打开 **中继配置**，选择内置源或新增你自己的 API 源，填入 Key 并同步模型。
-3. 设为当前生效源，启动 Cursor / Windsurf / Devin —— 开始用你自己的 API。
+1. Run the installer (click **Yes** if a one-time UAC prompt appears).
+2. Open **Relay Config**, pick a built-in source or add your own, then fill in your key and sync models.
+3. Set it as the active source and launch Cursor / Windsurf / Devin — now running on your own API.
 
-> 切换源后如提示重启 IDE，重启即可让新模型列表生效。
-
----
-
-## 自动更新
-
-内置自动更新：检测到新版本会在应用内提示，一键下载升级，无需手动重装。
+> If prompted to restart the IDE after switching sources, restart it to load the new model list.
 
 ---
 
-## 反馈
+## Auto-Update
 
-遇到问题或有建议，欢迎在 **[Issues](../../issues)** 提出。
+Coday keeps itself current: when a new version ships, you get an in-app prompt to download and upgrade in one click — no manual reinstall.
 
-<div align="center"><br><sub>© Coday · 仅供授权用户使用</sub></div>
+---
+
+## Feedback
+
+Found a bug or have an idea? Open an **[Issue](../../issues)**.
+
+<div align="center"><br><sub>© Coday · For authorized use only</sub></div>
