@@ -2,86 +2,122 @@
 
 # ⚡ Coday
 
-### 给 Cursor · Windsurf · Devin 灌入你自己的 API —— 任意模型，任意来源
+**给 Cursor、Windsurf、Devin 灌入你自己的 API 源**
+
+任意模型 · 任意来源 · 不被内置渠道限制
 
 <p>
   <a href="../../releases/latest">
-    <img src="https://img.shields.io/github/v/release/HyperClockUp/Coday?label=%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88&style=for-the-badge&color=007aff&logo=github" alt="下载最新版" />
+    <img src="https://img.shields.io/badge/Download-Latest-007aff?style=for-the-badge&logo=github&logoColor=white" alt="Download" />
   </a>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Windows-10%20/%2011-007aff?style=for-the-badge&logo=windows" alt="Windows" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/macOS-%E5%8D%B3%E5%B0%86%E6%94%AF%E6%8C%81-8a8a8e?style=for-the-badge&logo=apple" alt="macOS" />
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Cursor-007aff?style=for-the-badge" alt="Cursor" />
+  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square&color=007aff" alt="Release" /></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Windsurf-007aff?style=for-the-badge" alt="Windsurf" />
+  <img src="https://img.shields.io/badge/Windows-10_%7C_11-007aff?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Devin-007aff?style=for-the-badge" alt="Devin" />
+  <img src="https://img.shields.io/badge/macOS-soon-8a8a8e?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
 </p>
+
+</div>
+
+<!-- 产品截图（可选）：把 docs/screenshot.png 放进仓库后取消下一行注释即可展示
+<div align="center"><img src="docs/screenshot.png" width="760" alt="Coday 界面" /></div>
+-->
+
+---
+
+## 概览
+
+**Coday** 是一个桌面客户端，把 **Cursor、Windsurf、Devin** 发出的 AI 请求接管到你自己配置的 API 源——第三方中转、官方网关，或你自己的 Key 都行——让这些 IDE 用上 **任意模型、任意来源**。
+
+配好源、填上 Key，在熟悉的 IDE 里照常聊天写码，背后走的全是你的 API。
+
+<br>
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="240">
+🧩<br><b>多 IDE 接管</b><br><br>
+<sub>Cursor · Windsurf · Devin<br>一处配置，全部生效</sub>
+<br><br>
+</td>
+<td align="center" width="240">
+🔌<br><b>自定义 API 源</b><br><br>
+<sub>灌入你的 Key 或中转<br>Claude · GPT · Gemini 任选</sub>
+<br><br>
+</td>
+<td align="center" width="240">
+🔀<br><b>多源切换</b><br><br>
+<sub>配置多个源<br>首页一键切换，即切即生效</sub>
+<br><br>
+</td>
+</tr>
+<tr>
+<td align="center" width="240">
+📚<br><b>模型库</b><br><br>
+<sub>自动同步上游模型<br>按模型设单价与思考强度</sub>
+<br><br>
+</td>
+<td align="center" width="240">
+🧠<br><b>用量估算</b><br><br>
+<sub>按你的单价估算花费<br>每笔请求心里有数</sub>
+<br><br>
+</td>
+<td align="center" width="240">
+🔄<br><b>自动更新</b><br><br>
+<sub>内置更新器<br>新版应用内一键升级</sub>
+<br><br>
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+## 支持的 IDE
+
+<div align="center">
+
+| Cursor | Windsurf | Devin |
+| :----: | :------: | :---: |
+|   ✅   |    ✅    |   ✅   |
+
+<sub>更多 IDE 持续接入中</sub>
 
 </div>
 
 ---
 
-**Coday** 是一个桌面客户端：把 **Cursor / Windsurf / Devin** 的 AI 请求接管到 **你自己配置的 API 源**——无论是第三方中转、官方网关，还是你自己的 API Key——让它们用上 **任意模型、任意来源**，不再被内置渠道限制。
+## 下载与安装
 
-配好源、填上 Key，在你熟悉的 IDE 里照常聊天写码，背后走的全是你的 API。
+前往 **[Releases](../../releases/latest)** 下载最新安装包。
 
----
+| 平台 | 安装包 | 状态 |
+| ---- | ------ | :--: |
+| **Windows 10 / 11** | `Coday_x.x.x_x64-setup.exe` | ✅ |
+| **macOS** | — | 开发中 |
 
-## ✨ 能做什么
+**三步上手**
 
-| | |
-|---|---|
-| 🧩 **多 IDE 支持** | Cursor · Windsurf · Devin —— 同一个客户端接管，一处配置全部生效 |
-| 🔌 **自定义 API 源** | 把你自己的 Key / 第三方中转灌进 IDE —— Claude、GPT、Gemini… 想用谁用谁 |
-| 🔀 **多源 · 一键切换** | 配置多个 API 源，随时在首页下拉切换「当前生效源」，切完即重连生效 |
-| 📚 **模型库** | 自动从上游 `/v1/models` 同步模型，或手动添加；按模型填**单价**、统一设**思考强度**（low / medium / high / xhigh / max） |
-| 🧠 **真实用量** | 按你填的单价估算 token 花费，心里有数 |
-| 🔄 **自动更新** | 内置更新器，有新版应用内一键升级，无需重新下载 |
+1. 双击安装包完成安装（如弹出一次 UAC 授权，点「是」）。
+2. 打开 **中继配置**，选择内置源或新增你自己的 API 源，填入 Key 并同步模型。
+3. 设为当前生效源，启动 Cursor / Windsurf / Devin —— 开始用你自己的 API。
 
-## 🧩 支持的 IDE
-
-| IDE | 状态 |
-|------|------|
-| **Cursor** | ✅ 已支持 |
-| **Windsurf** | ✅ 已支持 |
-| **Devin** | ✅ 已支持 |
-| 更多 | 持续接入中 |
-
-## ⬇️ 下载
-
-前往 **[Releases →](../../releases/latest)** 获取最新安装包：
-
-| 平台 | 安装包 |
-|------|--------|
-| **Windows** | `Coday_x.x.x_x64-setup.exe` |
-| macOS | 即将支持 |
-
-## 🚀 快速开始
-
-1. 下载并双击 `Coday_x.x.x_x64-setup.exe` 完成安装（如出现一次系统授权 UAC，点「是」）；
-2. 打开 **中继配置**，选择内置源或新增你自己的 API 源，**填入 Key** 并同步模型；
-3. 把它**设为当前生效源**，启动 **Cursor / Windsurf / Devin** —— 开始用你自己的 API。
-
-> 切换源后如提示重启 IDE，按提示重启即可让新模型列表生效。
-
-## 🔄 自动更新
-
-Coday 内置自动更新：有新版本时会在应用内提示，**一键下载并升级**，全程无需手动重装。
-
-## 💻 系统要求
-
-- Windows 10 / 11（64 位）
-- macOS 支持开发中
-
-## 🐞 反馈
-
-使用中遇到问题，欢迎在 **[Issues](../../issues)** 反馈。
+> 切换源后如提示重启 IDE，重启即可让新模型列表生效。
 
 ---
 
-<div align="center"><sub>Coday · 仅供授权用户使用</sub></div>
+## 自动更新
+
+内置自动更新：检测到新版本会在应用内提示，一键下载升级，无需手动重装。
+
+---
+
+## 反馈
+
+遇到问题或有建议，欢迎在 **[Issues](../../issues)** 提出。
+
+<div align="center"><br><sub>© Coday · 仅供授权用户使用</sub></div>
