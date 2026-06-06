@@ -1,125 +1,54 @@
-<div align="center">
+# Coday
 
-<b>English</b> · <a href="README.zh-CN.md">简体中文</a>
+> 让你在 **Cursor** 和 **Windsurf / Devin** 里继续用熟悉的 AI 编程体验，同时把上游换成你自己配置的 API 源。
 
-# ⚡ Coday
+Coday 是一个 Windows 桌面客户端。它在本地起一个透明代理，接管这些编辑器的 AI 请求，按各家协议自动转换后转发到你指定的上游（支持 OpenAI 兼容接口与 Claude 接口）。装好、连接、打开编辑器正常用就行，编辑器侧不需要任何改动。
 
-**Bring your own API to Cursor, Windsurf & Devin**
-
-Any model · Any provider · No built-in channel limits
-
-<p>
-  <a href="../../releases/latest">
-    <img src="https://img.shields.io/badge/Download-Latest-007aff?style=for-the-badge&logo=github&logoColor=white" alt="Download" />
-  </a>
-</p>
-
-<p>
-  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square&color=007aff" alt="Release" /></a>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Windows-10_%7C_11-007aff?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/macOS-soon-8a8a8e?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
-</p>
-
-</div>
-
-<!-- Product screenshot (optional): drop docs/screenshot.png into the repo and uncomment the line below
-<div align="center"><img src="docs/screenshot.png" width="760" alt="Coday" /></div>
--->
+> 本仓库仅用于**安装包下载与自动更新分发**，不包含源代码。
 
 ---
 
-## Overview
+## ⬇️ 下载安装
 
-**Coday** is a desktop client that reroutes the AI requests from **Cursor, Windsurf, and Devin** to an API source you control — a third-party relay, an official gateway, or your own key — letting these IDEs run on **any model, from any provider**.
-
-Set up a source, drop in your key, and keep chatting and coding in the IDE you already know — everything behind the scenes runs on your own API.
-
-<br>
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="240">
-🧩<br><b>Multi-IDE</b><br><br>
-<sub>Cursor · Windsurf · Devin<br>One client, configure once</sub>
-<br><br>
-</td>
-<td align="center" width="240">
-🔌<br><b>Bring Your Own API</b><br><br>
-<sub>Your own key or relay<br>Claude · GPT · Gemini, your pick</sub>
-<br><br>
-</td>
-<td align="center" width="240">
-🔀<br><b>Source Switching</b><br><br>
-<sub>Configure multiple sources<br>Switch from home, instantly</sub>
-<br><br>
-</td>
-</tr>
-<tr>
-<td align="center" width="240">
-📚<br><b>Model Library</b><br><br>
-<sub>Auto-sync upstream models<br>Per-model price & reasoning effort</sub>
-<br><br>
-</td>
-<td align="center" width="240">
-🧠<br><b>Usage Estimate</b><br><br>
-<sub>Cost based on your pricing<br>Know every request's spend</sub>
-<br><br>
-</td>
-<td align="center" width="240">
-🔄<br><b>Auto-Update</b><br><br>
-<sub>Built-in updater<br>One-click in-app upgrade</sub>
-<br><br>
-</td>
-</tr>
-</table>
-</div>
+前往 [Releases](../../releases/latest) 下载最新版本的 `Coday_x.y.z_x64-setup.exe`，双击安装即可。已安装的旧版本在打开时会自动收到升级提示。
 
 ---
 
-## Supported IDEs
+## ✨ 主要功能
 
-<div align="center">
-
-| Cursor | Windsurf | Devin |
-| :----: | :------: | :---: |
-|   ✅   |    ✅    |   ✅   |
-
-<sub>More IDEs on the way</sub>
-
-</div>
-
----
-
-## Download & Install
-
-Grab the latest installer from **[Releases](../../releases/latest)**.
-
-| Platform | Installer | Status |
-| -------- | --------- | :----: |
-| **Windows 10 / 11** | `Coday_x.x.x_x64-setup.exe` | ✅ |
-| **macOS** | — | In progress |
-
-**Three steps**
-
-1. Run the installer (click **Yes** if a one-time UAC prompt appears).
-2. Open **Relay Config**, pick a built-in source or add your own, then fill in your key and sync models.
-3. Set it as the active source and launch Cursor / Windsurf / Devin — now running on your own API.
-
-> If prompted to restart the IDE after switching sources, restart it to load the new model list.
+- **接管 Cursor / Windsurf / Devin**：自动识别协议并转换，编辑器里照常聊天、补全、Agent、调用工具。
+- **自定义 API 源与模型库**：集中管理接口地址与 Key，一键同步上游模型列表，随时切换当前生效源；支持任意 OpenAI 兼容 / Anthropic 协议的源。
+- **多源故障转移**：当前源限流 / 报错 / 连不上时自动切到下一个可用源，减少中断（默认关闭，按需开启）。
+- **自定义系统提示词（人设）**：按编辑器单独设置，可「替换」或「追加」，替换时仍保留工具调用、工作目录等关键能力，随时一键还原。
+- **出图 API 源**：可单独配置图片生成接口。
+- **身份与额度展示**：按编辑器自定义状态栏展示的账号信息。
+- **思考强度调节**：全局调节模型 reasoning 强度。
+- **网络与诊断**：内置请求查看、日志、证书与拦截状态诊断。
+- **中英文界面、深色主题、系统托盘、开机自启、自动更新。**
 
 ---
 
-## Auto-Update
+## 🚀 快速上手
 
-Coday keeps itself current: when a new version ships, you get an in-app prompt to download and upgrade in one click — no manual reinstall.
+1. 下载并安装最新版本。
+2. 打开 Coday，在「中继配置」里添加你的 API 源并填入 Key。
+3. 点击连接 —— 首次会自动安装本地证书并完成拦截配置。
+4. 打开 Cursor 或 Windsurf / Devin，像平常一样使用即可。
+
+所有 AI 请求都会被透明地转发到你配置的上游。
 
 ---
 
-## Feedback
+## 💻 系统要求
 
-Found a bug or have an idea? Open an **[Issue](../../issues)**.
+| 平台 | 最低版本 |
+|------|----------|
+| Windows | Windows 10 x64 |
 
-<div align="center"><br><sub>© Coday · For authorized use only</sub></div>
+---
+
+## 💬 反馈与交流
+
+使用中遇到问题、想提需求，或者单纯想交流，欢迎扫码加入 QQ 反馈群：
+
+<img src="docs/qq-group.jpg" alt="QQ 反馈群" width="240" />
