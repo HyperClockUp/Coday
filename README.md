@@ -1,54 +1,56 @@
 # Coday
 
-> 让你在 **Cursor** 和 **Windsurf / Devin** 里继续用熟悉的 AI 编程体验，同时把上游换成你自己配置的 API 源。
+English | [简体中文](./README.zh-CN.md)
 
-Coday 是一个 Windows 桌面客户端。它在本地起一个透明代理，接管这些编辑器的 AI 请求，按各家协议自动转换后转发到你指定的上游（支持 OpenAI 兼容接口与 Claude 接口）。装好、连接、打开编辑器正常用就行，编辑器侧不需要任何改动。
+> Keep your familiar AI coding experience in **Cursor** and **Windsurf / Devin**, while routing the upstream to your own configured API source.
 
-> 本仓库仅用于**安装包下载与自动更新分发**，不包含源代码。
+Coday is a Windows desktop client. It runs a transparent local proxy that intercepts the AI requests from these editors, converts them per each protocol, and forwards them to the upstream you specify (both OpenAI-compatible and Claude APIs are supported). Install, connect, open your editor and use it as usual — no changes needed on the editor side.
 
----
-
-## ⬇️ 下载安装
-
-前往 [Releases](../../releases/latest) 下载最新版本的 `Coday_x.y.z_x64-setup.exe`，双击安装即可。已安装的旧版本在打开时会自动收到升级提示。
+> This repository is only for **installer downloads and automatic update distribution**. It contains no source code.
 
 ---
 
-## ✨ 主要功能
+## ⬇️ Download
 
-- **接管 Cursor / Windsurf / Devin**：自动识别协议并转换，编辑器里照常聊天、补全、Agent、调用工具。
-- **自定义 API 源与模型库**：集中管理接口地址与 Key，一键同步上游模型列表，随时切换当前生效源；支持任意 OpenAI 兼容 / Anthropic 协议的源。
-- **多源故障转移**：当前源限流 / 报错 / 连不上时自动切到下一个可用源，减少中断（默认关闭，按需开启）。
-- **自定义系统提示词（人设）**：按编辑器单独设置，可「替换」或「追加」，替换时仍保留工具调用、工作目录等关键能力，随时一键还原。
-- **出图 API 源**：可单独配置图片生成接口。
-- **身份与额度展示**：按编辑器自定义状态栏展示的账号信息。
-- **思考强度调节**：全局调节模型 reasoning 强度。
-- **网络与诊断**：内置请求查看、日志、证书与拦截状态诊断。
-- **中英文界面、深色主题、系统托盘、开机自启、自动更新。**
+Grab the latest `Coday_x.y.z_x64-setup.exe` from [Releases](../../releases/latest) and run it. Installed older versions will receive an upgrade prompt on launch.
 
 ---
 
-## 🚀 快速上手
+## ✨ Features
 
-1. 下载并安装最新版本。
-2. 打开 Coday，在「中继配置」里添加你的 API 源并填入 Key。
-3. 点击连接 —— 首次会自动安装本地证书并完成拦截配置。
-4. 打开 Cursor 或 Windsurf / Devin，像平常一样使用即可。
-
-所有 AI 请求都会被透明地转发到你配置的上游。
+- **Takes over Cursor / Windsurf / Devin**: auto-detects and converts each protocol; chat, completion, Agent and tool calls keep working.
+- **Custom API sources & model library**: manage endpoints and keys in one place, sync the upstream model list with one click, switch the active source anytime; supports any OpenAI-compatible / Anthropic-protocol source.
+- **Multi-source failover**: auto-switch to the next available source when the current one is rate-limited / errors / unreachable (off by default, opt-in).
+- **Custom system prompt (persona)**: per editor, "replace" or "append"; replace mode still preserves tool calls, working directory and other essentials, with one-click restore.
+- **Image-generation source**: configure a dedicated image endpoint.
+- **Identity & quota display**: customize the account info shown in the status bar per editor.
+- **Thinking effort**: globally adjust the model's reasoning effort.
+- **Network & diagnostics**: built-in request inspector, logs, certificate / interception diagnostics.
+- **Bilingual UI, dark theme, system tray, launch on startup, automatic updates.**
 
 ---
 
-## 💻 系统要求
+## 🚀 Getting Started
 
-| 平台 | 最低版本 |
-|------|----------|
+1. Download and install the latest build.
+2. Open Coday, add your API source and key under "Relay Config".
+3. Click Connect — the first run installs a local CA certificate and sets up interception automatically.
+4. Open Cursor or Windsurf / Devin and use it as usual.
+
+All AI requests are transparently routed to your configured upstream.
+
+---
+
+## 💻 Requirements
+
+| Platform | Minimum |
+|----------|---------|
 | Windows | Windows 10 x64 |
 
 ---
 
-## 💬 反馈与交流
+## 💬 Feedback
 
-使用中遇到问题、想提需求，或者单纯想交流，欢迎扫码加入 QQ 反馈群：
+Questions, feature requests, or just want to chat — scan to join the QQ feedback group:
 
-<img src="docs/qq-group.jpg" alt="QQ 反馈群" width="240" />
+<img src="docs/qq-group.jpg" alt="QQ Feedback Group" width="240" />
