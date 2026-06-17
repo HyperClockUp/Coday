@@ -49,6 +49,15 @@ All AI requests are transparently routed to your configured upstream.
 
 ---
 
+## 🆕 What's New
+
+### v0.5.0
+- Improved context handling for Cursor multi-turn conversations — smoother behavior when switching models or in long chats, with less wasted usage.
+- Fixed several issues when calling Claude / OpenAI models under Cursor, for better stability.
+- Fixed Token-pack mode requiring a manual "Apply" after switching from custom-API mode — switching modes now takes effect right away.
+
+---
+
 ## 💬 Feedback
 
 Questions, feature requests, or just want to chat — scan to join the QQ feedback group:
