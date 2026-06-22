@@ -19,6 +19,7 @@ Grab the latest `Coday_x.y.z_x64-setup.exe` from [Releases](../../releases/lates
 ## ✨ Features
 
 - **Takes over Cursor / Windsurf / Devin**: auto-detects and converts each protocol; chat, completion, Agent and tool calls keep working.
+- **Remote SSH interception**: when your editor connects to a remote machine over Remote-SSH, Coday tunnels that AI traffic back to the local proxy so routing / model injection still apply (Linux remotes).
 - **Custom API sources & model library**: manage endpoints and keys in one place, sync the upstream model list with one click, switch the active source anytime; supports any OpenAI-compatible / Anthropic-protocol source.
 - **Multi-source failover**: auto-switch to the next available source when the current one is rate-limited / errors / unreachable (off by default, opt-in).
 - **Custom system prompt (persona)**: per editor, "replace" or "append"; replace mode still preserves tool calls, working directory and other essentials, with one-click restore.
@@ -50,6 +51,11 @@ All AI requests are transparently routed to your configured upstream.
 ---
 
 ## 🆕 What's New
+
+### v0.5.1
+- **Remote SSH interception (new)** — bring AI traffic from an editor's remote (Remote-SSH) language server back to the local proxy so routing / model injection still apply (Linux remotes).
+- UI/UX polish — the CA-certificate dialog no longer covers the window controls; custom sources can edit their URL and name inline; destructive actions (delete model / host, clear logs) confirm first; dialogs close with Esc and forms submit with Enter.
+- Stability — fixed a startup crash in the packed build.
 
 ### v0.5.0
 - Improved context handling for Cursor multi-turn conversations — smoother behavior when switching models or in long chats, with less wasted usage.
