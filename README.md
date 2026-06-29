@@ -1,8 +1,23 @@
+<div align="center">
+
+<img src="docs/assets/icon.png" width="88" alt="Coday" />
+
 # Coday
 
-English | [简体中文](./README.zh-CN.md)
+Use your own AI model in Cursor, Windsurf, Devin and Kiro.
 
-> A desktop client that lets you keep your familiar AI coding experience in **Cursor**, **Windsurf / Devin** and **Kiro**, while routing the upstream to your own configured API source.
+[![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square)](https://github.com/HyperClockUp/Coday/releases)
+[![Stars](https://img.shields.io/github/stars/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday)
+![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)
+
+English · [简体中文](./README.zh-CN.md) · [Download](https://github.com/HyperClockUp/Coday/releases/latest)
+
+</div>
+
+<p align="center">
+  <img src="docs/assets/coday.png" alt="Coday" width="360" />
+</p>
 
 Coday runs a transparent local proxy that intercepts the AI requests from these editors, converts them per each protocol, and forwards them to the upstream you specify (both OpenAI-compatible and Claude APIs are supported). Install, connect, open your editor and use it as usual — no changes needed on the editor side.
 
