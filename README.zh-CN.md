@@ -1,71 +1,61 @@
+<div align="center">
+
+<img src="docs/assets/icon.png" width="88" alt="Coday" />
+
 # Coday
 
-[English](./README.md) | 简体中文
+在 Cursor、Windsurf、Devin 和 Kiro 中，使用你自己选择的 AI 模型。
 
-> 让你在 **Cursor** 和 **Windsurf / Devin** 里继续用熟悉的 AI 编程体验，同时把上游换成你自己配置的 API 源。
+[![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square)](https://github.com/HyperClockUp/Coday/releases)
+[![Stars](https://img.shields.io/github/stars/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday)
+![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)
 
-Coday 是一个 Windows 桌面客户端。它在本地起一个透明代理，接管这些编辑器的 AI 请求，按各家协议自动转换后转发到你指定的上游（支持 OpenAI 兼容接口与 Claude 接口）。装好、连接、打开编辑器正常用就行，编辑器侧不需要任何改动。
+[English](./README.md) · 简体中文 · [下载](https://github.com/HyperClockUp/Coday/releases/latest)
 
-> 本仓库仅用于**安装包下载与自动更新分发**，不包含源代码。
+</div>
 
----
+<p align="center">
+  <img src="docs/assets/coday.png" alt="Coday" width="360" />
+</p>
 
-## ⬇️ 下载安装
+## 功能
 
-前往 [Releases](../../releases/latest) 下载最新版本的 `Coday_x.y.z_x64-setup.exe`，双击安装即可。已安装的旧版本在打开时会自动收到升级提示。
+- **多编辑器** — 支持 Cursor、Windsurf、Devin、Kiro，聊天、补全、Agent、工具调用照常使用。
+- **跨 IDE Skills 感知** — 自动读取项目中各编辑器的规则文件（.windsurfrules、.cursor/rules、.kiro/steering、CLAUDE.md 等），无论你用哪个编辑器都能获得完整的项目指令。
+- **自选模型与源** — 接入任意 OpenAI / Claude 兼容接口，一键同步模型，随时切换。
+- **多源故障转移** — 当前源不可用时自动切换到下一个可用源。
+- **远程开发** — 支持通过 Remote-SSH 连接的远程主机。
+- **自定义人设** — 为每个编辑器单独设置系统提示词（替换或追加）。
+- **图像生成** — 可配置独立的出图服务。
+- **思考强度** — 全局调节模型 reasoning 强度。
+- **网络诊断** — 内置请求查看、日志与状态面板。
 
----
+## 快速开始
 
-## ✨ 主要功能
+1. [下载](https://github.com/HyperClockUp/Coday/releases/latest)并安装 Coday。
+2. 选择一个内置源，或填入你自己的接口地址与 Key。
+3. 连接后打开编辑器，照常使用。
 
-- **接管 Cursor / Windsurf / Devin**：自动识别协议并转换，编辑器里照常聊天、补全、Agent、调用工具。
-- **远程 SSH 拦截**：编辑器通过 Remote-SSH 连远程开发机时，把远端的 AI 流量接回本地代理，路由 / 模型注入照常生效（支持 Linux 远程主机）。
-- **自定义 API 源与模型库**：集中管理接口地址与 Key，一键同步上游模型列表，随时切换当前生效源；支持任意 OpenAI 兼容 / Anthropic 协议的源。
-- **多源故障转移**：当前源限流 / 报错 / 连不上时自动切到下一个可用源，减少中断（默认关闭，按需开启）。
-- **自定义系统提示词（人设）**：按编辑器单独设置，可「替换」或「追加」，替换时仍保留工具调用、工作目录等关键能力，随时一键还原。
-- **出图 API 源**：可单独配置图片生成接口。
-- **身份与额度展示**：按编辑器自定义状态栏展示的账号信息。
-- **思考强度调节**：全局调节模型 reasoning 强度。
-- **网络与诊断**：内置请求查看、日志、证书与拦截状态诊断。
-- **中英文界面、深色主题、系统托盘、开机自启、自动更新。**
+## 最近更新
 
----
+### v0.5.5
+- **跨 IDE Skills 感知** — 自动读取项目中各编辑器的规则文件（.windsurfrules、.cursor/rules、.kiro/steering、CLAUDE.md、.devin/ 等），无论你用哪个编辑器都能获得完整的项目指令。
+- 增加上游响应超时时间，减少大模型长对话中断。
+- 修正 IDE 环境识别：Devin 不再被误认为 VSCode/Cursor。
 
-## 🚀 快速上手
+## 系统要求
 
-1. 下载并安装最新版本。
-2. 打开 Coday，在「中继配置」里添加你的 API 源并填入 Key。
-3. 点击连接 —— 首次会自动安装本地证书并完成拦截配置。
-4. 打开 Cursor 或 Windsurf / Devin，像平常一样使用即可。
+Windows 10（x64）及以上。
 
-所有 AI 请求都会被透明地转发到你配置的上游。
+## Star History
 
----
+[![Star History Chart](https://api.star-history.com/svg?repos=HyperClockUp/Coday&type=Date)](https://star-history.com/#HyperClockUp/Coday&Date)
 
-## 💻 系统要求
+## 反馈
 
-| 平台 | 最低版本 |
-|------|----------|
-| Windows | Windows 10 x64 |
+<img src="docs/assets/qq-group.jpg" alt="交流群" width="200" />
 
----
+## 许可
 
-## 🆕 更新日志
-
-### v0.5.1
-- **远程 SSH 拦截（新）** —— 把编辑器远程（Remote-SSH）language server 的 AI 流量接回本地代理，路由 / 模型注入照常生效（支持 Linux 远程主机）。
-- 界面/交互打磨 —— CA 证书弹窗不再遮挡窗口控制按钮；自定义源的 URL 和名称可内联编辑；删除模型 / 主机、清空日志等危险操作会先确认；弹窗支持 Esc 关闭、表单支持 Enter 提交。
-- 稳定性 —— 修复加壳版的启动闪退。
-
-### v0.5.0
-- 优化 Cursor 多轮对话的上下文处理，切换模型 / 长对话时表现更顺，减少不必要的消耗。
-- 修复 Cursor 下调用 Claude / OpenAI 模型的若干问题，提升稳定性。
-- 修复从「自选 API」切换到「Token 包」模式后需要手动点一次「应用」才生效的问题，现在切换即生效。
-
----
-
-## 💬 反馈与交流
-
-使用中遇到问题、想提需求，或者单纯想交流，欢迎扫码加入 QQ 反馈群：
-
-<img src="docs/qq-group.jpg" alt="QQ 反馈群" width="240" />
+Proprietary. 保留所有权利。
