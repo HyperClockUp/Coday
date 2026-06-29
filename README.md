@@ -92,6 +92,12 @@ All AI requests are transparently routed to your configured upstream.
 
 ---
 
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=HyperClockUp/Coday&type=Date)](https://star-history.com/#HyperClockUp/Coday&Date)
+
+---
+
 ## 💬 Feedback
 
 Questions, feature requests, or just want to chat — scan to join the QQ feedback group:
