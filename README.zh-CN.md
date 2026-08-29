@@ -39,8 +39,26 @@
 
 ## 最近更新
 
+### v0.7.5
+- **跨协议 Prompt 缓存** — 修复 Devin/Windsurf 多轮对话缓存命中率低的问题；Anthropic、OpenAI Chat Completions、OpenAI Responses 三种协议面全部对齐。
+- **CA 证书串号匹配** — 按序列号识别 Coday CA，防止过期同名证书误连导致 IDE 断连。
+- 改善中文 Web 搜索结果相关性。
+
+### v0.7.4
+- Windsurf 和 Devin 拦截方式改为 hosts 劫持，兼容性更好。
+
+### v0.7.0 – v0.7.3
+- **OpenClaw 中心** — 工作区文件编辑器、权限、Agent 与记忆管理一站式面板。
+- **CLI Skills 管理器** — 跨工具技能清单，支持从 ZIP 安装与更新检查。
+- **CLI MCP 管理器** — 每个 CLI 工具独立切换 MCP Server。
+- **CLI 提示词中心** — 单活跃提示词投射到实时文件。
+- **CLI 源切换** — 将 Relay 源写入各 CLI Agent 自身配置。
+- **OpenAI Responses** — 按源开启 Responses API；Kiro 接入与功能窗口失活修复。
+- **多源故障转移 v2** — 源级路由、图像源、跨窗口语言同步、model-source v3 重构。
+- 修复 Devin 回退崩溃与并行工具配对问题。
+
 ### v0.5.5
-- **跨 IDE Skills 感知** — 自动读取项目中各编辑器的规则文件（.windsurfrules、.cursor/rules、.kiro/steering、CLAUDE.md、.devin/ 等），无论你用哪个编辑器都能获得完整的项目指令。
+- **跨 IDE Skills 感知** — 自动读取项目中各编辑器的规则文件，无论你用哪个编辑器都能获得完整的项目指令。
 - 增加上游响应超时时间，减少大模型长对话中断。
 - 修正 IDE 环境识别：Devin 不再被误认为 VSCode/Cursor。
 

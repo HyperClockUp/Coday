@@ -87,23 +87,28 @@ All AI requests are transparently routed to your configured upstream.
 
 ## 🆕 What's New
 
+### v0.7.5
+- **Prompt caching across protocols** — fixed Devin/Windsurf turns losing cache hits; volatile IDE state no longer breaks the cached prefix across Anthropic, OpenAI Chat Completions and OpenAI Responses surfaces.
+- **CA serial matching** — the relay now matches the Coday CA by serial number, preventing a stale same-named CA from breaking IDE connections.
+- Improved Chinese web-search result relevance.
+
+### v0.7.4
+- Windsurf and Devin interception switched to hosts-based redirect for improved compatibility.
+
+### v0.7.0 – v0.7.3
+- **OpenClaw center** — workspace file editor, permissions, agents and memory management from a single panel.
+- **CLI Skills manager** — cross-tool skill inventory with install-from-ZIP and update checks.
+- **CLI MCP manager** — one MCP server library toggled per CLI tool.
+- **CLI prompt center** — single-active prompts projected to live files.
+- **CLI provider switch** — relay sources written into each CLI agent's own config.
+- **OpenAI Responses** — per-source Responses API support; Kiro integration and feature-window deactivation fix.
+- **Multi-source failover v2** — source-level routing, image source, cross-window locale sync, model-source v3 refactor.
+- Devin rollback crash and parallel tool pairing fix.
+
 ### v0.5.5
-- **Cross-IDE Skills awareness** — the relay now reads project-level rules from all IDE conventions (.windsurfrules, .cursor/rules/, .kiro/steering/, CLAUDE.md, .devin/) regardless of which editor you're using, so the model always sees your full project instructions.
+- **Cross-IDE Skills awareness** — the relay reads project-level rules from all IDE conventions (.windsurfrules, .cursor/rules/, .kiro/steering/, CLAUDE.md, .devin/) regardless of which editor you're using.
 - Increased upstream response timeout for long conversations.
 - Fixed IDE environment identification — Devin is no longer misidentified as VSCode or Cursor.
-
-### v0.5.2
-- Fixed: the active-SSH detector no longer flags git transport (git push / fetch over SSH to GitHub / GitLab / etc.) as a Remote-SSH host to intercept.
-
-### v0.5.1
-- **Remote SSH interception (new)** — when your editor's language server runs on a remote machine over Remote-SSH, Coday now brings that AI traffic back to the local proxy so routing / model injection still apply (Linux remotes).
-- UI/UX polish — the CA-certificate dialog no longer covers the window controls; custom sources can edit their URL and name inline; destructive actions (delete model / host, clear logs) now confirm first; dialogs close with Esc and forms submit with Enter.
-- Stability — fixed a startup crash in the packed (protected) build.
-
-### v0.5.0
-- Improved context handling for Cursor multi-turn conversations — smoother behavior when switching models or in long chats, with less wasted usage.
-- Fixed several issues when calling Claude / OpenAI models under Cursor, for better stability.
-- Fixed Token-pack mode requiring a manual "Apply" after switching from custom-API mode — switching modes now takes effect right away.
 
 ---
 
