@@ -4,7 +4,8 @@
 
 # Coday
 
-Use your own AI model in Cursor, Windsurf, Devin and Kiro.
+Keep your editor. Use your own models.
+Cursor, Windsurf, Devin, and Kiro.
 
 [![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square)](https://github.com/HyperClockUp/Coday/releases)
@@ -86,6 +87,13 @@ All AI requests are transparently routed to your configured upstream.
 ---
 
 ## 🆕 What's New
+
+### v0.7.14
+- **Devin GetChatMessage aligned with official live capture** — Connect frames, empty/1302 retry, F7 usage, keepalive.
+- **Devin Local usage** — SSE usage and Cascade F7 tokens so the 1M progress bar no longer stays at 0.
+- **Cursor protocol fixes** from cursor-byok 1.0.1.
+- Drop grok user-echo / task restatements that painted duplicate Thoughts.
+- Cut capture / fail-dump load; Kiro keepalives no longer open empty Thinking widgets.
 
 ### v0.7.5
 - **Prompt caching across protocols** — fixed Devin/Windsurf turns losing cache hits; volatile IDE state no longer breaks the cached prefix across Anthropic, OpenAI Chat Completions and OpenAI Responses surfaces.

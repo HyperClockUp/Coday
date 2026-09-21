@@ -4,7 +4,8 @@
 
 # Coday
 
-在 Cursor、Windsurf、Devin 和 Kiro 中，使用你自己选择的 AI 模型。
+不换编辑器，用你自己的模型。
+支持 Cursor、Windsurf、Devin、Kiro。
 
 [![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square)](https://github.com/HyperClockUp/Coday/releases)
@@ -38,6 +39,13 @@
 3. 连接后打开编辑器，照常使用。
 
 ## 最近更新
+
+### v0.7.14
+- **Devin GetChatMessage 对齐官方** — Connect 帧、empty/1302 重试、F7 usage、keepalive 与 live capture 一致。
+- **Devin Local 用量** — SSE usage 与 Cascade F7 tokens，1M 进度条不再停在 0。
+- **Cursor 协议修复** — 合入 cursor-byok 1.0.1 的协议修正。
+- 过滤 grok 复述用户话 / 任务重述，避免重复 Thoughts。
+- 降低 capture / fail-dump 卡顿；Kiro 心跳不再弹出空 Thinking。
 
 ### v0.7.5
 - **跨协议 Prompt 缓存** — 修复 Devin/Windsurf 多轮对话缓存命中率低的问题；Anthropic、OpenAI Chat Completions、OpenAI Responses 三种协议面全部对齐。
