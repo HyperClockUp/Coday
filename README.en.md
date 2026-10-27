@@ -1,131 +1,167 @@
 <div align="center">
 
-<img src="docs/assets/icon.png" width="88" alt="Coday" />
+<img src="docs/assets/icon.png" width="96" alt="Coday" />
 
 # Coday
 
-Keep your editor. Use your own models.
-Cursor, Windsurf, Devin, and Kiro.
+### Keep your editor. Use your own models.
 
-[![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square)](https://github.com/HyperClockUp/Coday/releases)
-[![Stars](https://img.shields.io/github/stars/HyperClockUp/Coday?style=flat-square)](https://github.com/HyperClockUp/Coday)
-![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)
+**A BYOK gateway for Cursor, Windsurf, Devin and Kiro.**
+Plug in any OpenAI-compatible or Claude API. Chat, completion, Agent and tool calls keep working as usual.
 
-English · [简体中文](./README.md) · [Download](https://github.com/HyperClockUp/Coday/releases/latest)
+[![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square&color=2f6bff)](https://github.com/HyperClockUp/Coday/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/HyperClockUp/Coday/total?style=flat-square&color=22c55e)](https://github.com/HyperClockUp/Coday/releases)
+[![Stars](https://img.shields.io/github/stars/HyperClockUp/Coday?style=flat-square&color=f59e0b)](https://github.com/HyperClockUp/Coday/stargazers)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-0078d4?style=flat-square)
+![BYOK](https://img.shields.io/badge/BYOK-OpenAI%20%7C%20Claude-8b5cf6?style=flat-square)
+
+[**Download**](https://github.com/HyperClockUp/Coday/releases/latest) · [Quick start](#quick-start) · [Features](#features) · [FAQ](#faq) · [简体中文](./README.md)
+
+<br />
+
+<img src="docs/assets/coday.png" alt="Coday UI" width="380" />
 
 </div>
 
-<p align="center">
-  <img src="docs/assets/coday.png" alt="Coday" width="360" />
-</p>
-
-Coday runs a transparent local proxy that intercepts the AI requests from these editors, converts them per each protocol, and forwards them to the upstream you specify (both OpenAI-compatible and Claude APIs are supported). Install, connect, open your editor and use it as usual — no changes needed on the editor side.
-
 ---
 
-## ✨ Features
+## The problem
 
-### 🔌 Editor takeover
-Supports Cursor, Windsurf / Devin and Kiro. Auto-detects each protocol and converts it, so chat, completion, Agent and tool calls all keep working in the editor.
+You like Cursor, Windsurf, Devin or Kiro, but:
 
-### 🛰️ Remote SSH interception
-When your editor connects to a remote machine over Remote-SSH, its language server — and the AI traffic — runs remotely, out of the local proxy's reach. Coday tunnels that traffic back to the local MITM (reverse SSH tunnel + remote redirect + remote CA injection), so routing and model injection still apply. Linux remotes supported.
+- The built-in quota is not enough, or you prefer a different model
+- You already have your own API key, relay or company gateway, and the editor gives you no way to use it
+- You use more than one editor and have to redo the config, prompts and rules for each one
 
-### 🧩 Custom API sources & model library
-- Manage API sources in one place: paste your endpoint and key, sync the upstream model list with one click.
-- Custom models, display names and price tags; switch the active source anytime.
-- Built-in sources work out of the box; add any OpenAI-compatible / Anthropic-protocol source.
+Coday runs a transparent local proxy. It takes the AI requests your editor sends, converts them per each protocol, and forwards them to **the upstream you choose**.
+Install, connect, open your editor and use it as usual. Nothing changes on the editor side.
 
-### 🔁 Multi-source failover
-When enabled, if the current source fails (rate-limited, error, unreachable) Coday automatically switches to the next available source, reducing sudden interruptions. Off by default, opt-in.
+```
+  Editor (Cursor / Windsurf / Devin / Kiro)
+        |
+        |  native editor protocol
+        v
+  Coday  (local transparent proxy: protocol conversion / routing / failover / prompt injection)
+        |
+        |  OpenAI-compatible / Claude protocol
+        v
+  Your API source  (official API / relay / company gateway / self-hosted)
+```
 
-### 🖋️ Custom system prompt (persona)
-Set a system prompt per editor, with two injection modes:
-- **Replace** — replace the editor's own prompt with yours (tool calls, working directory and other essentials are still preserved).
-- **Append** — append your content after the editor's existing prompt.
-Restore to default anytime.
+## Why Coday
 
-### 🎨 Image-generation source
-Configure a dedicated image endpoint; image generation in the editor routes through the service you specify.
+| You want | What Coday does |
+|---|---|
+| Keep your editor | Native takeover; chat, completion, Agent and tool calls keep working |
+| Use your own models | Any OpenAI-compatible / Claude API, one-click model sync |
+| No interruption when a source fails | Multi-source failover to the next available source |
+| One set of rules across editors | Cross-IDE Skills awareness reads each editor's rule files |
+| Remote development | Remote-SSH supported via a reverse tunnel back to the local proxy |
+| Debuggable when it breaks | Built-in request inspector, logs, certificate and interception diagnostics |
 
-### 🪪 Identity & quota display
-Customize the account info shown in the status bar per editor — independent across editors.
+## Features
 
-### 🧭 Thinking effort
-Globally adjust the model's reasoning effort, from off to maximum.
+### Editor takeover
+Supports **Cursor, Windsurf, Devin and Kiro**. Each protocol is detected and converted automatically, so chat, completion, Agent and tool calls all stay available.
 
-### 📊 Network & diagnostics
-Built-in request/response inspector, logs, and certificate / interception diagnostics — one window to figure out "why isn't it working".
+### Your models, your sources
+- Manage multiple API sources in one place: paste an endpoint and key, sync the upstream model list in one click
+- Custom models, display names and price tags; switch the active source anytime
+- Built-in sources work out of the box; add any OpenAI-compatible or Anthropic-protocol source
 
-### 🌗 Polish
-- Bilingual (English / Chinese) UI, switch anytime.
-- Dark theme, system tray quick controls, launch on startup.
-- Automatic update check after install.
+### Multi-source failover
+If the current source is rate-limited, returns errors or is unreachable, Coday switches to the next available source automatically so conversations are not cut off. Off by default, opt-in.
 
----
+### Cross-IDE Skills awareness
+Coday reads project-level rule files from every editor convention, so you get the full set of project instructions no matter which editor you are in:
 
-## 💻 Requirements
+`.windsurfrules` · `.cursor/rules/` · `.kiro/steering/` · `CLAUDE.md` · `.devin/`
 
-| Platform | Minimum |
-|----------|---------|
-| Windows | Windows 10 x64 |
+### Remote development (Remote-SSH)
+When your editor connects to a remote machine over Remote-SSH, its language server and AI traffic run remotely. Coday tunnels that traffic back to the local proxy over a reverse SSH tunnel, so routing and model injection still apply. Linux remotes supported.
 
-> Windows is the primary platform for now.
+### Custom system prompt (persona)
+Set a system prompt per editor, with two modes:
 
----
+- **Replace**: swap the editor's own prompt for yours (tool calls, working directory and other essentials are still preserved)
+- **Append**: add your content after the editor's existing prompt
 
-## 🚀 Getting Started
+Restore the default anytime.
 
-1. Download and install the latest build from [GitHub Releases](../../releases).
-2. Open Coday, add your API source and key under "Relay Config".
-3. Click Connect — the first run installs a local CA certificate and sets up interception automatically.
-4. Open Cursor, Windsurf / Devin or Kiro and use it as usual.
+### More
+- **Image generation**: configure a dedicated image endpoint
+- **Thinking effort**: adjust model reasoning effort globally, from off to maximum
+- **Identity and quota display**: customize the account info shown in the status bar, per editor
+- **Diagnostics**: request/response inspector, logs, certificate and interception status in one window
+- **Polish**: bilingual UI, dark theme, system tray, launch on startup, automatic update check
 
-All AI requests are transparently routed to your configured upstream.
+## Quick start
 
----
+1. Download and install the latest build from [Releases](https://github.com/HyperClockUp/Coday/releases/latest)
+2. Open Coday, pick a built-in source or enter your own endpoint and key
+3. Click Connect. The first run installs a local CA certificate and sets up interception automatically
+4. Open Cursor / Windsurf / Devin / Kiro and use it as usual
 
-## 🆕 What's New
+## FAQ
+
+**Does Coday read or upload my code?**
+AI requests go through the local Coday proxy, are converted, and are forwarded to the API source you select in the UI (a built-in source or your own endpoint). Which source and key to use is your choice; if you are sensitive about data flow, use your own endpoint.
+
+**Why does it install a CA certificate?**
+Editor AI traffic is HTTPS. Coday needs a local CA to decrypt it, convert the protocol and forward it to your upstream. The certificate is used locally only and can be inspected or removed in the system certificate manager.
+
+**Which models and APIs are supported?**
+Any OpenAI-compatible (Chat Completions / Responses) or Claude (Anthropic) protocol endpoint.
+
+**Does it support macOS / Linux?**
+Windows 10 x64 and later is the primary platform. Linux is supported only as a Remote-SSH remote host.
+
+**It does not connect or nothing happens. What now?**
+Open the built-in diagnostics panel to check the certificate, interception status and request logs. If that does not help, join the group below.
+
+## What's new
+
+### v0.8.1
+- Window corner radius aligned with the system radius, no more gaps at the corners
+- Fixed the loading arc animation
+- Unified glass-style visuals; palette reduced to brand blue plus semantic colors
+- Hardened installer, updated minisign signature and auto-update manifest
+
+### v0.7.18
+- Desktop pet shows in-progress step and plan progress
+- Fixed the Devin Fast Context Unleash toggle
+
+### v0.7.17
+- Fast Context hooked into Devin CLI prompt rewriting; patch applied best-effort on connect / startup
+
+### v0.7.16
+- Fixed Kiro text turns being treated as truncated and retried repeatedly
+- grok-4.x now uses OpenAI Chat Completions per model protocol
+- Expanded `$ref` in Kiro tool JSON Schemas to avoid empty 400 replies on some models
+- Upstream errors are now visible in the conversation
 
 ### v0.7.5
-- **Prompt caching across protocols** — fixed Devin/Windsurf turns losing cache hits; volatile IDE state no longer breaks the cached prefix across Anthropic, OpenAI Chat Completions and OpenAI Responses surfaces.
-- **CA serial matching** — the relay now matches the Coday CA by serial number, preventing a stale same-named CA from breaking IDE connections.
-- Improved Chinese web-search result relevance.
+- **Prompt caching across protocols**: fixed Devin / Windsurf multi-turn cache misses across Anthropic, OpenAI Chat Completions and OpenAI Responses
+- **CA serial matching**: prevents a stale same-named CA from breaking IDE connections
+- Improved Chinese web-search relevance
 
-### v0.7.4
-- Windsurf and Devin interception switched to hosts-based redirect for improved compatibility.
+Older versions: see [Releases](https://github.com/HyperClockUp/Coday/releases).
 
-### v0.7.0 – v0.7.3
-- **OpenClaw center** — workspace file editor, permissions, agents and memory management from a single panel.
-- **CLI Skills manager** — cross-tool skill inventory with install-from-ZIP and update checks.
-- **CLI MCP manager** — one MCP server library toggled per CLI tool.
-- **CLI prompt center** — single-active prompts projected to live files.
-- **CLI provider switch** — relay sources written into each CLI agent's own config.
-- **OpenAI Responses** — per-source Responses API support; Kiro integration and feature-window deactivation fix.
-- **Multi-source failover v2** — source-level routing, image source, cross-window locale sync, model-source v3 refactor.
-- Devin rollback crash and parallel tool pairing fix.
+## Requirements
 
-### v0.5.5
-- **Cross-IDE Skills awareness** — the relay reads project-level rules from all IDE conventions (.windsurfrules, .cursor/rules/, .kiro/steering/, CLAUDE.md, .devin/) regardless of which editor you're using.
-- Increased upstream response timeout for long conversations.
-- Fixed IDE environment identification — Devin is no longer misidentified as VSCode or Cursor.
+Windows 10 (x64) or later.
 
----
-
-## ⭐ Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=HyperClockUp/Coday&type=Date)](https://star-history.com/#HyperClockUp/Coday&Date)
 
----
+If Coday helps you, a Star is the most direct way to support the project.
 
-## 💬 Feedback
+## Feedback
 
-Questions, feature requests, or just want to chat — scan to join the QQ feedback group:
+Questions, feature requests or just a chat: scan to join the QQ group, or open an [Issue](https://github.com/HyperClockUp/Coday/issues).
 
-<img src="docs/assets/qq-group.jpg" alt="QQ Feedback Group" width="240" />
-
----
+<img src="docs/assets/qq-group.jpg" alt="QQ Feedback Group" width="200" />
 
 ## License
 
