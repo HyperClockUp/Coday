@@ -6,7 +6,7 @@
 
 ### 不换编辑器，用你自己的模型。
 
-**Cursor / Windsurf / Devin / Kiro 一键接管。**
+**首推 Devin，同时支持 Cursor / Windsurf / Kiro / VS Code。**
 接入任意 OpenAI / Claude 兼容接口，聊天、补全、Agent、工具调用全部照常工作。
 
 [![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square&color=2f6bff)](https://github.com/HyperClockUp/Coday/releases/latest)
@@ -19,7 +19,7 @@
 
 <br />
 
-<img src="docs/assets/demo-takeover.gif" alt="一键接管 Cursor / Devin / Kiro" width="700" />
+<img src="docs/assets/home.png" alt="Coday 首页：IDE 管理、中继配置、用量与 Devin 全家桶" width="820" />
 
 </div>
 
@@ -27,7 +27,7 @@
 
 ## 你是不是也遇到过
 
-- 正在 Cursor 里改到一半，弹出「额度用完了」
+- 正在 Devin 里跑任务，额度提示先到了
 - 想换个更顺手的模型，编辑器却把模型写死了
 - 明明自己有 API Key、有中转站、有公司网关，编辑器偏偏只认它自家的地址
 - 三四个编辑器轮着用，每个都要重新配一遍提示词和规则
@@ -36,9 +36,9 @@
 编辑器那边什么都不用改：照样聊天，照样补全，照样跑 Agent 和工具调用。
 
 ```
-Cursor   ┐
-Windsurf ├──>  Coday (本机透明代理)  ──>  OpenAI 兼容 / Claude / 自建服务
-Devin    │      协议转换 / 模型注入 / 多源路由
+Devin    ┐
+Cursor   ├──>  Coday (本机透明代理)  ──>  OpenAI 兼容 / Claude / 自建服务
+Windsurf │      协议转换 / 模型注入 / 多源路由
 Kiro     ┘
 ```
 
@@ -56,8 +56,24 @@ Kiro     ┘
 
 ## 核心能力
 
+### Devin 全家桶（首推）
+不只是接管流量，Devin 相关的能力集中在一个面板里：
+
+| 功能 | 做什么 |
+|---|---|
+| 快速上下文 | 自动复用你本地的 Devin 登录，代码库检索无需额外配置 |
+| Devin Tab 补全 | 走官方 GetTab Supercomplete，用你自己的账号凭证 |
+| CLI 提示词改写 | 等长改写本机 Devin CLI / Devin Local / ACP 的系统提示词并注入 AGENTS.md，支持一键回滚 |
+| Devin 汉化 | 界面文案换成简体中文，语言包等四层落地，可一键还原 |
+
+其余编辑器同样支持接管，见下方。
+
 ### 一键接管
-点亮开关就能接管 Cursor、Windsurf / Devin、Kiro。自动识别各家协议的差异并转换，聊天、补全、Agent、工具调用全部照常，不用手填 `base_url`。
+点亮开关就能接管 Devin、Cursor、Windsurf、Kiro，以及 VS Code（GitHub Copilot）。自动识别各家协议的差异并转换，聊天、补全、Agent、工具调用全部照常，不用手填 `base_url`。
+
+<p align="center">
+  <img src="docs/assets/demo-takeover.gif" alt="一键接管各编辑器" width="700" />
+</p>
 
 ### 自选模型与 API 源
 粘贴接口地址和 Key，一键同步上游模型列表。显示名、价格标签、自定义模型都能改，支持任意 OpenAI 兼容或 Anthropic 协议接口，随时切换当前源。
@@ -92,6 +108,7 @@ Kiro     ┘
 - 图像生成可单独指定出图源
 - 全局调节模型思考强度（reasoning effort）
 - 按编辑器分别自定义状态栏的账号与额度展示
+- 内置 MCP 服务器管理、编码宠物、随手记
 - 中英双语界面、深色主题、系统托盘、开机自启、自动检查更新
 
 ## 快速开始
@@ -99,13 +116,9 @@ Kiro     ┘
 1. 从 [Releases](https://github.com/HyperClockUp/Coday/releases/latest) 下载并安装最新版
 2. 打开 Coday，选一个内置源，或填入你自己的接口地址与 Key
 3. 点击连接，首次运行会自动安装本地 CA 证书并设置拦截
-4. 打开 Cursor / Windsurf / Devin / Kiro，照常使用
+4. 打开 Devin（或 Cursor / Windsurf / Kiro / VS Code），照常使用
 
 装完这一步就结束了，之后编辑器的 AI 请求会自动走你选定的源。
-
-<p align="center">
-  <img src="docs/assets/home.webp" alt="Coday 主界面" width="720" />
-</p>
 
 ## 常见问题
 

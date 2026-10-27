@@ -6,7 +6,7 @@
 
 ### Keep your editor. Use your own models.
 
-**One switch takes over Cursor, Windsurf, Devin and Kiro.**
+**Devin first, plus Cursor, Windsurf, Kiro and VS Code.**
 Plug in any OpenAI-compatible or Claude API. Chat, completion, Agent and tool calls keep working as usual.
 
 [![Release](https://img.shields.io/github/v/release/HyperClockUp/Coday?style=flat-square&color=2f6bff)](https://github.com/HyperClockUp/Coday/releases/latest)
@@ -19,7 +19,7 @@ Plug in any OpenAI-compatible or Claude API. Chat, completion, Agent and tool ca
 
 <br />
 
-<img src="docs/assets/demo-takeover.gif" alt="One switch takes over Cursor / Devin / Kiro" width="700" />
+<img src="docs/assets/home.png" alt="Coday home: IDE management, relay config, usage and the Devin suite" width="820" />
 
 </div>
 
@@ -27,7 +27,7 @@ Plug in any OpenAI-compatible or Claude API. Chat, completion, Agent and tool ca
 
 ## Sound familiar?
 
-- You are mid-refactor in Cursor and the quota notice appears
+- You are mid-task in Devin and the quota notice appears
 - You want a model you like better, but the editor hardcodes its own
 - You already have an API key, a relay or a company gateway, yet the editor only talks to its own endpoint
 - You rotate between three or four editors and redo prompts and rules in each one
@@ -36,9 +36,9 @@ Plug in any OpenAI-compatible or Claude API. Chat, completion, Agent and tool ca
 Nothing changes on the editor side: chat, completion, Agent and tool calls all keep working.
 
 ```
-Cursor   ┐
-Windsurf ├──>  Coday (local transparent proxy)  ──>  OpenAI-compatible / Claude / self-hosted
-Devin    │      protocol conversion / model injection / multi-source routing
+Devin    ┐
+Cursor   ├──>  Coday (local transparent proxy)  ──>  OpenAI-compatible / Claude / self-hosted
+Windsurf │      protocol conversion / model injection / multi-source routing
 Kiro     ┘
 ```
 
@@ -56,8 +56,24 @@ Kiro     ┘
 
 ## Features
 
+### The Devin suite (flagship)
+More than traffic takeover. Everything Devin-related lives in one panel:
+
+| Feature | What it does |
+|---|---|
+| Fast Context | Reuses your local Devin sign-in for codebase search, no extra setup |
+| Devin Tab completion | Official GetTab Supercomplete, using your own account credentials |
+| CLI prompt rewriting | Length-preserving rewrite of the system prompt in local Devin CLI / Devin Local / ACP, with AGENTS.md injection and one-click rollback |
+| Devin localization | Simplified Chinese UI, applied across four layers, restorable in one click |
+
+Other editors are supported too, see below.
+
 ### One-switch takeover
-Flip a switch and Coday takes over Cursor, Windsurf / Devin and Kiro. It detects each protocol's differences and converts them, so chat, completion, Agent and tool calls keep working. No `base_url` to hand-edit.
+Flip a switch and Coday takes over Devin, Cursor, Windsurf, Kiro and VS Code (GitHub Copilot). It detects each protocol's differences and converts them, so chat, completion, Agent and tool calls keep working. No `base_url` to hand-edit.
+
+<p align="center">
+  <img src="docs/assets/demo-takeover.gif" alt="One-switch takeover across editors" width="700" />
+</p>
 
 ### Your models, your sources
 Paste an endpoint and key, sync the upstream model list in one click. Rename models, tag prices, add custom entries. Works with any OpenAI-compatible or Anthropic-protocol endpoint; switch the active source anytime.
@@ -92,6 +108,7 @@ Built-in request console, usage stats, and certificate / interception diagnostic
 - A dedicated image-generation source
 - Global reasoning-effort control
 - Per-editor status-bar identity and quota display
+- Built-in MCP server management, coding pet and scratch notes
 - Bilingual UI, dark theme, system tray, launch on startup, automatic update check
 
 ## Quick start
@@ -99,13 +116,9 @@ Built-in request console, usage stats, and certificate / interception diagnostic
 1. Download and install the latest build from [Releases](https://github.com/HyperClockUp/Coday/releases/latest)
 2. Open Coday, pick a built-in source or enter your own endpoint and key
 3. Click Connect. The first run installs a local CA certificate and sets up interception
-4. Open Cursor / Windsurf / Devin / Kiro and use it as usual
+4. Open Devin (or Cursor / Windsurf / Kiro / VS Code) and use it as usual
 
 That is the whole setup. From then on, the editor's AI requests go through the source you selected.
-
-<p align="center">
-  <img src="docs/assets/home.webp" alt="Coday main window" width="720" />
-</p>
 
 ## FAQ
 
