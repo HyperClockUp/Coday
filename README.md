@@ -79,7 +79,7 @@ Kiro     ┘
 粘贴接口地址和 Key，一键同步上游模型列表。显示名、价格标签、自定义模型都能改，支持任意 OpenAI 兼容或 Anthropic 协议接口，随时切换当前源。
 
 <p align="center">
-  <img src="docs/assets/models.webp" alt="一键同步上游模型列表" width="440" />
+  <img src="docs/assets/models.webp" alt="中继配置：模型列表、模型测试、多源故障转移与提示缓存" width="440" />
 </p>
 
 ### 多源故障转移
