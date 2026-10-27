@@ -79,7 +79,7 @@ Flip a switch and Coday takes over Devin, Cursor, Windsurf, Kiro and VS Code (Gi
 Paste an endpoint and key, sync the upstream model list in one click. Rename models, tag prices, add custom entries. Works with any OpenAI-compatible or Anthropic-protocol endpoint; switch the active source anytime.
 
 <p align="center">
-  <img src="docs/assets/models.webp" alt="Syncing the upstream model list" width="440" />
+  <img src="docs/assets/models.webp" alt="Relay config: model list, model test, multi-source failover and prompt caching" width="440" />
 </p>
 
 ### Multi-source failover
