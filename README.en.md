@@ -139,6 +139,20 @@ Check the certificate and interception status on the built-in diagnostics page. 
 
 ## What's new
 
+### v0.8.2
+- **One-click Devin sign-in**: built-in OAuth flow, no more copying a session token by hand
+- **Official Devin web search**: runs on the Devin account already in your pool, so no third-party search key
+- **Fusion presets**: pair two existing models as Lead + Sidekick; the pair appears as a single Fusion row in the model picker, with its own effort level and thinking switch on each side
+- **Source cards**: enable/disable and sync buttons on every source in the upstream rail, no more detour through the centre-pane menu
+- **Devin Local path fix**: the ACP agent now gets Git Bash at the front of `acp.agentEnv.Path`, so `bash` no longer lands on the Windows WSL launcher (an agent-written `E:\` path used to become `/mnt/e/` and fail), and disconnecting removes the injected `Path` again; the diagnostics panel now reports which `bash` the exec face resolves to
+- Localization panel, Stash cloud sync, desktop-pet step reveal and liquid-glass spec restored
+- Devin localization injection, Devin Local remote and the IDE install chain
+- Unified remote interception across IDEs plus IP-drift correction
+
+Fixes:
+- Relay model sync compatibility, pager pinning, and model-prefix saves no longer fail
+- Release notes no longer reuse hard-coded prose from an older version
+
 ### v0.8.1
 - Window corner radius aligned with the system radius, no more gaps at the corners
 - Fixed the loading arc animation

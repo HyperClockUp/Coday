@@ -139,6 +139,20 @@ Kiro     ┘
 
 ## 最近更新
 
+### v0.8.2
+- **Devin 一键登录**：内置 OAuth 授权流程，不用再手工复制 session token
+- **Devin 官方联网搜索**：直接用账号池里的 Devin 账号，免第三方 Key
+- **Fusion 预设**：把两个已有模型配成 Lead + Sidekick，在模型选择器里作为一行 Fusion 出现，两侧可分别设投入与思考等级
+- **上游源卡片**：新增「启用/取消启用」「同步」两个按钮，不用再进中栏菜单
+- **Devin Local 路径修复**：ACP agent 现在把 Git Bash 放到 `acp.agentEnv.Path` 首位，不再落到 Windows 的 WSL bash launcher（此前 agent 写出的 `E:\` 绝对路径在 WSL 里变成 `/mnt/e/` 而失效），断开连接会一并清掉注入的 Path；诊断面板新增 exec 面 bash 解析结果
+- 汉化面板、Stash 云端同步、宠物揭字与液态玻璃规范回归
+- Devin 汉化注入、Devin Local 远端与 IDE 安装链路
+- 远端拦截多 IDE 统一方案 + IP 漂移校正
+
+修复：
+- 中转站模型拉取兼容、分页吸底、模型前缀保存失效
+- 发版 changelog 不再复用硬编码旧文案
+
 ### v0.8.1
 - 窗口圆角与系统实际半径对齐，消除四角缝隙
 - 修复加载弧线动画失效
